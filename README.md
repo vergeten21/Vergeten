@@ -18,7 +18,8 @@ void my_func_1()
         printf("#");
     printf("\n");    
 }
-```#include <stdio.h>
+
+#include <stdio.h>
 #include <stdlib.h>
 void my_func_2(char,int);
 main()
@@ -38,4 +39,6 @@ void my_func_2(char c,int n)
         printf("%c",c);
     printf("\n");    
 }
+
+
 ```
