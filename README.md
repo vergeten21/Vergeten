@@ -60,5 +60,17 @@ int my_func_3(int a,int b)
     c=a+b;
     return c;
 }
-
+(4)
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+    int x,y,sum;
+    printf("input x:");
+    scanf("%d",&x);
+    printf("input y:");
+    scanf("%d",&y);
+    sum=x+y;
+    printf("sum:%d\n",sum);
+}
 
