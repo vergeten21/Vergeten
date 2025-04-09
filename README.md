@@ -231,5 +231,40 @@ void my_input_output(char c,int A[], int n)
     my_input(c,A,n);
     my_output(c,A,n);
 }
-
+(10)
+#include <stdio.h>
+#include <stdlib.h>
+void my_input(char,int A[], int);
+void my_output(char,int A[], int);
+main()
+{
+    int A[50],B[50],C[50],i,n,n1,n2;
+    printf("Input n:");
+    scanf("%d",&n);
+    printf("Input n1:");
+    scanf("%d",&n1);
+    printf("Input n2:");
+    scanf("%d",&n2);
+    my_input('A',A,n);
+    my_output('A',A,n);
+    my_input('B',B,n1);
+    my_output('B',B,n1);
+    my_input('C',C,n2);
+    my_output('C',C,n2);
+}
+void my_input(char c,int A[], int n)
+{
+    int i;
+    for(i=0;i<n;i++)
+    {
+        printf("input %c[%d]:",c,i);
+        scanf("%d",&A[i]);
+    }
+}
+void my_output(char c,int A[], int n)
+{    
+    int i;
+    for(i=0;i<n;i++)
+        printf("%c[%d]:%d\n",c,i,A[i]);
+}
 
