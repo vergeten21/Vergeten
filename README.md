@@ -78,16 +78,43 @@ main()
 #include <stdlib.h>
 main()
 {
-    int A[5],i,n;
+    int A[50],i,n;
     printf("Input n:");
     scanf("%d",&n);
     for(i=0;i<n;i++)
     {
-        printf("input A[%d]:");
+        printf("input A[%d]:",i);
         scanf("%d",&A[i]);
     }
     for(i=0;i<n;i++)
         printf("A[%d]:%d\n",i,A[i]);
 }
-
+(6)
+#include <stdio.h>
+#include <stdlib.h>
+void my_input(int A[], int);
+void my_output(int A[], int);
+main()
+{
+    int A[50],i,n;
+    printf("Input n:");
+    scanf("%d",&n);
+    my_input(A,n);
+    my_output(A,n);
+}
+void my_input(int A[], int n)
+{
+    int i;
+    for(i=0;i<n;i++)
+    {
+        printf("input A[%d]:",i);
+        scanf("%d",&A[i]);
+    }
+}
+void my_output(int A[], int n)
+{
+    int i;
+    for(i=0;i<n;i++)
+        printf("A[%d]:%d\n",i,A[i]);
+}
 
