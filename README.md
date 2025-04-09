@@ -73,4 +73,21 @@ main()
     sum=x+y;
     printf("sum:%d\n",sum);
 }
+（5）
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+    int A[5],i,n;
+    printf("Input n:");
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        printf("input A[%d]:");
+        scanf("%d",&A[i]);
+    }
+    for(i=0;i<n;i++)
+        printf("A[%d]:%d\n",i,A[i]);
+}
+
 
