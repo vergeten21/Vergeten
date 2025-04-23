@@ -1,4 +1,61 @@
-test 2
-```
-test 222
-```
+1)
+
+#include <stdio.h>
+#include <stdlib.h>
+int my_add(int,int);
+void my_input();
+void my_output();
+int x,y,sum=0;
+main()
+{
+    my_input();
+    sum=my_add(x,y);
+    my_output();
+}
+void my_input()
+{
+    printf("Input x:");
+    scanf("%d",&x);
+    printf("Input y:");
+    scanf("%d",&y);
+}
+int my_add(int a,int b)
+{
+    int c;
+    c=a+b;
+    return c;
+}
+void my_output(int )
+{
+    printf("%d+%d=%d\n",x,y,sum);
+}
+
+2)
+
+#include <stdio.h>
+#include <stdlib.h>
+void my_add();
+void my_input();
+void my_output();
+int x,y,sum=0;
+main()
+{
+    my_input();
+    my_add();
+    my_output();
+}
+void my_input()
+{
+    printf("Input x:");
+    scanf("%d",&x);
+    printf("Input y:");
+    scanf("%d",&y);
+}
+void my_add(int a,int b)
+{
+    sum=x+y;;
+}
+void my_output(int )
+{
+    printf("%d+%d=%d\n",x,y,sum);
+}
