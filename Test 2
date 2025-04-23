@@ -194,3 +194,24 @@ void my_output(int a,int b,int c)
 }
 
 8)
+
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+    int i=0,A[100]={0},x,j;
+    while(1)
+    {
+        printf("Input A[%d]:");
+        scanf("%d",&x);
+        if(x>=0)
+        {
+            A[i]=x;
+            i++;
+        }
+        else
+            break;
+    }
+    for(j=0;j<i;j++)
+        printf("A[%d]=%d\n",j,A[j]);
+}
