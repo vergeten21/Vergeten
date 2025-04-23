@@ -25,7 +25,7 @@ int my_add(int a,int b)
     c=a+b;
     return c;
 }
-void my_output(int )
+void my_output(int c)
 {
     printf("%d+%d=%d\n",x,y,sum);
 }
@@ -55,12 +55,12 @@ void my_add(int a,int b)
 {
     sum=x+y;;
 }
-void my_output(int )
+void my_output(int c)
 {
     printf("%d+%d=%d\n",x,y,sum);
 }
 
-3)
+3) supposed to be broken
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -93,7 +93,7 @@ void my_output(int a,int b,int c)
     printf("%d+%d=%d\n",a,b,c);
 }
 
-4)
+4)same as 5
 
 5)
 
