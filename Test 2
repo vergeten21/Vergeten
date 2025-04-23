@@ -59,3 +59,79 @@ void my_output(int )
 {
     printf("%d+%d=%d\n",x,y,sum);
 }
+
+3)
+
+4)
+
+5)
+
+6)
+
+#include <stdio.h>
+#include <stdlib.h>
+void my_add();
+void my_input();
+void my_output();
+int x,y,sum=0;
+main()
+{
+    my_input();
+    my_add();
+    my_output();
+}
+void my_input()
+{
+    printf("Input x:");
+    scanf("%d",&x);
+    printf("Input y:");
+    scanf("%d",&y);
+}
+void my_add()
+{
+    int i;
+    for(i=x;i<=y;i++)
+        sum=sum+i;
+}
+void my_output(int a,int b,int c)
+{
+    printf("sum:%d\n",sum);
+}
+
+7)
+
+#include <stdio.h>
+#include <stdlib.h>
+void my_add();
+void my_input();
+void my_output();
+int x,y,sum=0;
+main()
+{
+    my_input();
+    my_add();
+    my_output();
+}
+void my_input()
+{
+    printf("Input x:");
+    scanf("%d",&x);
+    printf("Input y:");
+    scanf("%d",&y);
+}
+void my_add()
+{
+    int i;
+    i=x;
+    while(i<=y)
+    {
+        sum=sum+i;
+        i++;
+    }
+}
+void my_output(int a,int b,int c)
+{
+    printf("sum:%d\n",sum);
+}
+
+8)
