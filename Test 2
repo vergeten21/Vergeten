@@ -62,6 +62,37 @@ void my_output(int c)
 
 3) supposed to be broken
 
+#include <stdio.h>
+#include <stdlib.h>
+int my_add(int,int);
+void my_input();
+void my_output(int,int,int);
+main()
+{
+    int x,y,sum=0;
+    my_input();
+    sum=my_add(x,y);
+    my_output(x,y,sum);
+}
+int my_add(int a,int b)
+{
+    int c;
+    c=a+b;
+    return c;
+}
+void my_input()
+{
+    int x,y;
+    printf("Input x:");
+    scanf("%d",&x);
+    printf("Input y:");
+    scanf("%d",&y);
+}
+void my_output(int a,int b,int c)
+{
+    printf("%d+%d=%d\n",a,b,c);
+}
+
 
 
 4)same as 5
