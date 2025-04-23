@@ -62,11 +62,22 @@ void my_output(int c)
 
 3) supposed to be broken
 
+
+
+4)same as 5
+
+5)
+
 #include <stdio.h>
 #include <stdlib.h>
-int my_add();
+void my_add();
 void my_input();
 void my_output();
+int A[2],sum#include <stdio.h>
+#include <stdlib.h>
+int my_add(int,int);
+void my_input();
+void my_output(int,int,int);
 main()
 {
     int x,y,sum=0;
@@ -92,17 +103,7 @@ void my_output(int a,int b,int c)
 {
     printf("%d+%d=%d\n",a,b,c);
 }
-
-4)same as 5
-
-5)
-
-#include <stdio.h>
-#include <stdlib.h>
-void my_add();
-void my_input();
-void my_output();
-int A[2],sum=0;
+=0;
 main()
 {
     my_input();
