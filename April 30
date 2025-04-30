@@ -110,3 +110,18 @@ int main()
     rec(1);
     return 0;
 }
+
+8)
+
+#include <stdio.h>
+void rec(int n)
+{
+    if(n==0) return;
+    printf("Recursion Level %d\n",n);
+    rec(n-1);
+}
+int main()
+{
+    rec(6);
+    return 0;
+}
