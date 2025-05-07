@@ -110,3 +110,47 @@ void gotoxy(int x, int y) {
     coord.Y = y;
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
 }
+
+4)
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <windows.h>
+#include <conio.h>
+#include <ctype.h>  // for tolower()
+
+void gotoxy(int x, int y);
+
+int main() {
+    int x = 10, y = 10;
+    char ch;
+
+    while (1) {
+        system("cls");
+        gotoxy(x, y);
+        printf("*");
+
+        ch = getch(); 
+        ch = tolower(ch);  // Convert input to lowercase to simplify switch
+
+        switch (ch) {
+            case 'w': y--; break;             // Move up
+            case 's': y++; break;             // Move down
+            case 'a': x--; break;             // Move left
+            case 'z': x++; break;             // Move right
+            case 'c': system("cls"); break;   // Clear screen
+            case 'q': return 0;               // Quit program
+            default: break;                   // Do nothing for other keys
+        }
+    }
+
+    return 0;
+}
+
+void gotoxy(int x, int y) {
+    COORD coord;
+    coord.X = x;
+    coord.Y = y;
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
+}
+
