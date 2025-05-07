@@ -24,7 +24,7 @@ void gotoxy(int xpos, int ypos)
     SetConsoleCursorPosition(hOuput,scrn);
 }
 
-2)
+2) game
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -50,6 +50,55 @@ int main() {
         else if (ch == 'z' || ch == 'Z') x++;    // Move right
         else if (ch == 'c' || ch == 'C') system("cls");  // Clear screen
         else if (ch == 'q' || ch == 'Q') break;  // Quit
+    }
+
+    return 0;
+}
+
+void gotoxy(int x, int y) {
+    COORD coord;
+    coord.X = x;
+    coord.Y = y;
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
+}
+
+3) middle start
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <windows.h>
+#include <conio.h>
+
+void gotoxy(int x, int y);
+
+int main() {
+    int x, y;
+    char ch;
+    
+    // Get console window size
+    CONSOLE_SCREEN_BUFFER_INFO csbi;
+    int columns, rows;
+    GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &csbi);
+    columns = csbi.srWindow.Right - csbi.srWindow.Left + 1;
+    rows = csbi.srWindow.Bottom - csbi.srWindow.Top + 1;
+
+    // Start in the middle
+    x = columns / 2;
+    y = rows / 2;
+
+    while (1) {
+        system("cls");
+        gotoxy(x, y);
+        printf("*");
+
+        ch = getch();  // Get key without Enter
+
+        if (ch == 'w' || ch == 'W') y--;
+        else if (ch == 's' || ch == 'S') y++;
+        else if (ch == 'a' || ch == 'A') x--;
+        else if (ch == 'z' || ch == 'Z') x++;
+        else if (ch == 'c' || ch == 'C') system("cls");
+        else if (ch == 'q' || ch == 'Q') break;
     }
 
     return 0;
