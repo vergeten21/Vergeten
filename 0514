@@ -23,3 +23,31 @@ int main()
 }
 
 2)
+
+#include <stdio.h>
+#include <stdlib.h>
+main() 
+{
+    int i=0;
+    char y;
+    while (i<=255)
+    {
+        y=0x80;
+        int l=0;
+        while (y)
+        {
+            if (i&y)
+                printf("1");
+            else
+                printf("0");
+            l++;
+            if (l==4)
+                printf(" ");
+            y=y>>1;
+        }
+        printf("\n");
+        i++;
+    }
+}
+
+3)
