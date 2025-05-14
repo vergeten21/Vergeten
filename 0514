@@ -1,0 +1,25 @@
+1)
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() 
+{
+    char x,y=0x80;
+    int i = 0;
+    printf("input x:");
+    scanf("%d", &x);
+    while(y)
+    {
+        if (x&y)
+            printf("1");
+        else
+            printf("0");
+        i++;
+        if (i==4)
+            printf(" ");
+        y=y>>1;
+    }
+    printf("\n");
+}
+
+2)
