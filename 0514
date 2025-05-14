@@ -51,3 +51,32 @@ main()
 }
 
 3)
+
+#include <stdio.h>
+#include <stdlib.h>
+main() 
+{
+    char x=0x07,y;
+    int i=0,l;
+    while (i<255)
+    {
+        y=0x80;
+        l=0;
+        while (y)
+        {
+            if (x&y)
+                printf("1");
+            else
+                printf("0");
+            l++;
+            if (l==4)
+                printf(" ");
+            y=y>>1;
+        }
+        printf("\n");
+        x=x<<1;
+        if(x==0)
+            x=0x07;
+        i++;
+    }
+}
