@@ -23,3 +23,25 @@ main()
         printf("\n");
     }
 }
+
+2)
+
+#include <stdio.h>
+#include <stdlib.h>
+main() 
+{
+    int i, x, y;
+    for(x=0;x<256;x++)
+    {
+        y=128;
+        int l=0;
+        for(y=128;y;y>>=1)
+        {
+            printf((x&y)?"1":"0");
+            l++;
+            if (l==4)
+                printf(" ");
+        }
+        printf("\n");
+    }
+}
