@@ -1,0 +1,25 @@
+1)
+
+#include <stdio.h>
+#include <stdlib.h>
+main() 
+{
+    int i,x,y;
+    for(x=0;x<256;x++)
+    {
+        y=128;
+        int l=0;
+        for(i=0;i<8;i++)
+        {
+            if (x&y)
+                printf("1");
+            else
+                printf("0");
+            l++;
+            if (l==4)
+                printf(" ");
+            y=y>>1;
+        }
+        printf("\n");
+    }
+}
