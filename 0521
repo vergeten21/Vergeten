@@ -45,3 +45,45 @@ main()
         printf("\n");
     }
 }
+
+3)
+
+#include <stdio.h>
+#include <stdlib.h>
+void print_binary(int x);
+int get_hex_H(int);
+int get_hex_L(int);
+main() 
+{
+    int x;
+    printf("Input x: ");
+    scanf("%x",&x);
+    printf("x's Hex: %X \n",x);
+    print_binary(x);
+    printf("\n");
+    printf("x's H: %2X\n ",get_hex_H(x));
+    printf("x's L: %2X\n ",get_hex_L(x));
+}
+void printf_binary(int x)
+{
+    int y=0x80;
+    while(y)
+    {
+        if(x&y)
+            printf("1");
+        else
+            printf("0");
+        y=y>>1;
+    }
+}
+int get_hex_H(int x)
+{
+    int k=0xf0,y;
+    y=(x&k)>>4;
+    return y;
+}
+int get_hex_L(int x)
+{
+    int k=0x0f;
+    return (x&k);
+}            
