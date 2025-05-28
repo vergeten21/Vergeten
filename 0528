@@ -16,3 +16,21 @@ main()
             printf("%d",i);    
     }
 }
+
+3)
+
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+    int i=0;
+    while(1)
+    {
+        if(i==5)
+            break;
+        else
+            printf("%d",i);
+        i++;        
+    }
+}
+
