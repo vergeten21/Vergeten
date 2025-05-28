@@ -1,0 +1,18 @@
+1)
+
+
+2)
+
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+    int i;
+    for(i=0;i<10;i++)
+    {
+        if(i==5)
+            break;
+        else
+            printf("%d",i);    
+    }
+}
