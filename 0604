@@ -1,0 +1,56 @@
+late 
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <windows.h>
+#include <conio.h>
+void gotoxy(int x, int y);
+int main() {
+    int x = 54, y = 10, k[5];
+    int input, counter = 0;
+    char ch;
+    int auto_counting_done = 0;
+    printf("Input ending number (0-9999): ");
+    scanf("%d", &input);
+    if (input < 0 || input > 9999) {
+        printf("Input must be between 0 and 9999.\n");
+        return 1;
+    }
+    while (1) {
+        if (counter > 9999) counter = 9999;
+        if (counter < 0) counter = 0;
+        gotoxy(x, y);
+        k[1] = k[0] / 1000;
+        k[2] = ((counter - 1000 * (counter / 1000)) / 100);
+        k[3] = ((counter - 1000 * (counter / 1000)) - ((counter - 1000 * (counter / 1000)) / 100) * 100) / 10;
+        k[4] = ((counter - 1000 * (counter / 1000)) - ((counter - 1000 * (counter / 1000)) / 100) * 100) - (((counter - 1000 * (counter / 1000)) - ((counter - 1000 * (counter / 1000)) / 100) * 100) / 10) * 10;
+        printf("%d%d%d%d", k[1], k[2], k[3], k[4]);
+        Sleep(100);
+        if (_kbhit()) {
+            ch = getch();
+            if (ch == 'c') {
+                counter = 0;
+                auto_counting_done = 0;
+            } else if (ch == 'a') {
+                if (counter < 9999) counter++;
+            } else if (ch == 's') {
+                if (counter > 0) counter--;
+            }
+        } else {
+            if (!auto_counting_done && counter < input) {
+                counter++;
+            } else {
+                auto_counting_done = 1;
+            }
+        }
+        gotoxy(x, y);
+        printf("    ");
+    }
+    return 0;
+}
+void gotoxy(int x, int y) {
+    COORD coord;
+    coord.X = x;
+    coord.Y = y;
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
+}
