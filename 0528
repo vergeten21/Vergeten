@@ -17,6 +17,7 @@ main()
     }
 }
 
+
 3)
 
 #include <stdio.h>
@@ -34,3 +35,20 @@ main()
     }
 }
 
+4)
+
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+    int i;
+    i=0;
+ABC:
+    if(i==10)
+        goto XYZ;
+    printf("%d",i);
+    i++;
+    goto ABC;
+XYZ:
+    return;          
+}
