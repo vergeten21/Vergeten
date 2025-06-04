@@ -145,4 +145,20 @@ main()
     if(x<60)
         printf("%d is fail.\n",x);
 }    
+8)
+
+#include <stdio.h>
+main()
+{
+    int x=80,y=40,z=50;
+    printf("Input X:");
+    scanf("%d",&x);
+    if(x<60)
+        printf("%d:C\n",x);
+    if(x>=60&&x<80)
+        printf("%d:B\n",x);    
+    if(x>=80)
+        printf("%d:A\n",x);
+}    
+
 
