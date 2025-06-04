@@ -92,7 +92,27 @@ main()
     }       
 }    
 4)
-5)
+
+#include <stdio.h>
+#include <time.h>
+main()
+{
+    int A[3][5],i,j;
+    srand((unsigned)time(NULL));
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<5;j++)
+        {
+            A[i][j]=rand()%101;
+            printf("A[%d][%d]:%d",i,j,A[i][j]);
+            printf("\n");
+        } 
+    }       
+}    
+
+5) looks like number 4
+
+
 6)
 
 #include <stdio.h>
