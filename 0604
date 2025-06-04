@@ -176,5 +176,28 @@ main()
         printf("%d:B\n",x);
 }    
 
+10)
+
+#include <stdio.h>
+int main()
+{
+    int x;
+    printf("Input X: ");
+    scanf("%d", &x);
+    switch (x/10)
+    {
+        case 10:
+        case 9:
+        case 8:
+            printf("%d:A\n", x);
+            break;
+        case 7:
+        case 6:
+            printf("%d:B\n", x);
+            break;
+        default:
+            printf("%d:C\n", x);
+    }
+}
 
 
