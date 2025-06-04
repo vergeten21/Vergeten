@@ -65,3 +65,13 @@ int main(){
     printf("Age is: %d\n",age);
     return 0;
 }    
+2)
+
+#include <stdio.h>
+int main(){
+    char age[3];
+    puts("Enter your age: ");
+    gets(age);
+    printf("Age is: %s\n",age);
+    return 0;
+}    
