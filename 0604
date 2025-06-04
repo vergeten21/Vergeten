@@ -75,3 +75,19 @@ int main(){
     printf("Age is: %s\n",age);
     return 0;
 }    
+
+3)
+
+#include <stdio.h>
+main()
+{
+    int A[3][5],i,j;
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<5;j++)
+        {
+            printf("A[%d][%d]:",i,j);
+            scanf("%d",&A[i][j]);
+        } 
+    }       
+}    
