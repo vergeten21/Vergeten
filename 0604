@@ -131,4 +131,18 @@ main()
         } 
         i++;
     }       
+}  
+
+7)
+#include <stdio.h>
+main()
+{
+    int x=80,y=40,z=50;
+    printf("Input X:");
+    scanf("%d",&x);
+    if(x>=60)
+        printf("%d is pass.\n",x);
+    if(x<60)
+        printf("%d is fail.\n",x);
 }    
+
