@@ -31,3 +31,18 @@ void my_print(int m,int n,int p)
 {
     printf("%d+%d=%d\n",m,n,p);
 }
+
+3)
+
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+    int x,y,z;
+    printf("input x:");
+    scanf("%d",&x);
+    printf("input x:");
+    scanf("%d",&y);
+    z=x+y;
+    printf("%d+%d=%d\n",x,y,z);
+}
