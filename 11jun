@@ -113,3 +113,36 @@ void my_print(int m,int n,int p)
 {
     printf("%d+%d=%d\n",m,n,p);
 }
+
+5)
+
+
+#include <stdio.h>
+#include <stdlib.h>
+void my_init(int*,int*,int*);
+int my_add(int,int);
+void my_print(int,int,int);
+int x,y,z;
+main()
+{
+    my_init(&x,&y,&z);
+    z=my_add(x,y);
+    my_print(x,y,z);
+}
+int my_add(int m,int n)
+{
+    int k;
+    k=m+n;
+    return k;
+}
+void my_init(int* m,int* n,int* p)
+{
+    printf("input x:");
+    scanf("%d",m);
+    printf("input y:");
+    scanf("%d",n);
+}
+void my_print(int m,int n,int p)
+{
+    printf("%d+%d=%d\n",m,n,p);
+}
