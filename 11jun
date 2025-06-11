@@ -1,0 +1,33 @@
+1)
+
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+    int x=2,y=3,z;
+    z=x+y;
+    printf("%d+%d=%d\n",x,y,z);
+}    
+
+2)
+
+#include <stdio.h>
+#include <stdlib.h>
+int my_add(int,int);
+void my_print(int,int,int);
+main()
+{
+    int x=2,y=3,z;
+    z=my_add(x,y);
+    my_print(x,y,z);
+}  
+int my_add(int m,int n)
+{
+    int k;
+    k=m+n;
+    return k;
+}
+void my_print(int m,int n,int p)
+{
+    printf("%d+%d=%d\n",m,n,p);
+}
